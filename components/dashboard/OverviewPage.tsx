@@ -6,6 +6,7 @@ import {useEffect} from "react";
 import { useDispatch,useSelector } from 'react-redux';
 import Loader from "../shared/Loader";
 import MainChart from "../shared/MainChart";
+import MainDashboardTable from "./MainDashboardTable";
 interface dashboardCardData{
    "id": number,
     "title": string,
@@ -119,6 +120,12 @@ const OverviewPage=({handleActiveSidebar}:{handleActiveSidebar:(state:boolean)=>
 
               <section className="my-4">
                 <MainChart data={products} />
+              </section>
+
+              <section>
+                <MainDashboardTable
+                  title="Recent orders"
+                />
               </section>
             </section>
           ) : (
