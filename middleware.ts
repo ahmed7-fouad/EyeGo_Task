@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import { getCookie ,removeCookie} from "@/lib/cookies";
 export async function middleware(request: NextRequest) {
 // == For testing==
-  await removeCookie("token")
+//   await removeCookie("token")
   const token = await getCookie("token");
   const { pathname } = request.nextUrl;
   if (pathname==="/"){
