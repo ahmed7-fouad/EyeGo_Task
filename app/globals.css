@@ -1,26 +1,57 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary:var(--primary);
+  --color-secondary:var(--secondary);
+  --color-muted:var(--muted);
+  --color-primary-bg:var(--secondary-bg);
+  --color-secondary-bg:var(--primary-bg);
+  --color-accent:var(--accent);
+  --color-mainbg:var(--mainbg);
+  --color-card:var(--card);
+  --color-field:var(--field);
+  --color-card-border:var(--card-border);
+  --color-field-border:var(--field-border);
+  --color-pending-text:var(--pending-text);
+  --color-pending-bg:var(--pending-bg);
+  --color-success-text:var(--success-text);
+  --color-success-bg:var(--success-bg);
+  --color-failled-text:var(--failled-text);
+  --color-failled-bg:var(--failled-bg);
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --primary: 	#14161A;
+  --secondary:#97A0B5;;
+  --muted:#8A8F99;
+  --primary-bg:#1E2A44;
+  --secondary-bg:#10182B;
+  --accent: #E2A33B;
+  --mainbg:#F5F6F8;
+  --card: #fff;
+  --field:#FAFAFB;
+  --card-border:#E3E5EA;
+  --field-border:#CBCFD6;
+  --pending-text:#7A4E0B;
+  --pending-bg:#FBF0DE;
+  --success-text:#2F9E63;
+  --success-bg:#E5F5EC;
+  --failled-text:#D64545;
+  --failled-bg:#FBEAEA;
+}
+
+@layer base {
+  * {
+    box-sizing:border-box !important;
+    
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background-color: var(--mainbg);
+    color: var(--primary);
+  }
 }
